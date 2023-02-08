@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         // Create new Dice object with 6 sides and roll it
         val dice = Dice(6)
         val diceRoll = dice.roll()
+        val luckyNumber = 6
+        when(diceRoll){
+            luckyNumber -> println("higher")
+            1 -> println("try again!!")
+        }
         // Update the screen with the dice roll and convert de int to string
         val resultTextView: TextView = findViewById(R.id.textView)
         resultTextView.text = diceRoll.toString()
